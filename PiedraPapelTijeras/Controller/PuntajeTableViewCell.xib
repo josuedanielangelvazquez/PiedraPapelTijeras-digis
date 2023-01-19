@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="puntajecell" rowHeight="67" id="KGk-i7-Jjw" customClass="PuntajeTableViewCell" customModule="PiedraPapelTijeras" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="440" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="5Xn-Y7-oTv">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="67"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mF8-gO-6hd">
+                                <rect key="frame" x="0.0" y="0.0" width="44" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="2bD-lA-8nC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jugador1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UW6-r3-07W">
+                                <rect key="frame" x="76" y="0.0" width="90" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Cxl-ME-pdp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCI-c8-EEp">
+                                <rect key="frame" x="198" y="0.0" width="44" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Si2-3a-85t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jugador 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="re1-7A-zA4">
+                                <rect key="frame" x="274" y="0.0" width="90" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="9GF-L7-Oj6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvb-xl-Aa6" customClass="pun">
+                                <rect key="frame" x="396" y="0.0" width="44" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="qHw-cO-v17"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="5Xn-Y7-oTv" secondAttribute="bottom" id="F9E-SD-jFu"/>
+                    <constraint firstItem="5Xn-Y7-oTv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TMo-08-fWM"/>
+                    <constraint firstItem="5Xn-Y7-oTv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dYB-gy-q2o"/>
+                    <constraint firstAttribute="trailing" secondItem="5Xn-Y7-oTv" secondAttribute="trailing" id="ydt-cB-l8B"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="Jugador1lbl" destination="UW6-r3-07W" id="jtm-88-y2O"/>
+                <outlet property="Jugador2lbl" destination="re1-7A-zA4" id="3bu-4j-bbU"/>
+                <outlet property="Partidalbl" destination="mF8-gO-6hd" id="mkW-Ca-pLh"/>
+                <outlet property="Puntacion2lbl" destination="xvb-xl-Aa6" id="aY8-3f-bf4"/>
+                <outlet property="Puntacionlbl" destination="TCI-c8-EEp" id="Bm1-aC-lw3"/>
+            </connections>
+            <point key="canvasLocation" x="-4043.0769230769229" y="-6.0426540284360186"/>
+        </tableViewCell>
+    </objects>
+</document>
