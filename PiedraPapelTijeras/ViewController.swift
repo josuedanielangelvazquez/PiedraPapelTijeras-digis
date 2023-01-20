@@ -102,18 +102,18 @@ class ViewController: UIViewController {
         
       //  var Aceptar = UIAlertAction(title: "otra opcion", style: .default, handler: {miAccion in validar()})
         func validar(){
-            PiedraPc.backgroundColor = .black
+            PiedraPc.backgroundColor = .none
             PiedraPc.tintColor = .white
-            PapelPc.backgroundColor = .black
+            PapelPc.backgroundColor = .none
             PapelPc.tintColor = .white
-            TijerasPc.backgroundColor = .black
+            TijerasPc.backgroundColor = .none
             TijerasPc.tintColor = .white
-            PiedraJugador.backgroundColor = .black
+            PiedraJugador.backgroundColor = .none
             PiedraJugador.tintColor = .white
-            PapelJugador.backgroundColor = .black
+            PapelJugador.backgroundColor = .none
             PapelJugador.tintColor = .white
-            TijerasJugador.backgroundColor = .black
-            TijerasJugador.tintColor = .white
+            TijerasJugador.backgroundColor = .none
+            TijerasJugador.tintColor = .none
         }
         
        

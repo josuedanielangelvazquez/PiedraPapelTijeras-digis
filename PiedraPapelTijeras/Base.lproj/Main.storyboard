@@ -121,12 +121,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jl7-X1-4iH">
-                                <rect key="frame" x="215" y="328" width="57.333333333333314" height="28"/>
+                                <rect key="frame" x="215" y="308" width="97" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Salir"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="salida"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="zfL-zp-6nN" kind="show" id="9fN-Wy-v01"/>
                                 </connections>
@@ -174,12 +175,13 @@
                                 <color key="backgroundColor" systemColor="linkColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6F3-EQ-CtL">
-                                <rect key="frame" x="643" y="323" width="75" height="33"/>
+                                <rect key="frame" x="643" y="322" width="75" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Replay"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="replay"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iud-OU-bNQ"/>
@@ -192,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4l-lJ-xy4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78.16901408450704" y="-1903.0534351145038"/>
+            <point key="canvasLocation" x="-78.540772532188839" y="-1903.2558139534883"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -402,6 +404,8 @@
         <image name="playpause.fill" catalog="system" width="128" height="69"/>
         <image name="rectangle.inset.filled.and.person.filled" catalog="system" width="128" height="87"/>
         <image name="rename" width="512" height="512"/>
+        <image name="replay" width="512" height="512"/>
+        <image name="salida" width="512" height="512"/>
         <image name="tijeras" width="512" height="512"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
