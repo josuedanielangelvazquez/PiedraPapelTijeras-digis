@@ -14,12 +14,14 @@
 		A7416ED22972843500E1A765 /* PiedraPapelTijeras.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7416ED02972843500E1A765 /* PiedraPapelTijeras.xcdatamodeld */; };
 		A7416ED42972843500E1A765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7416ED32972843500E1A765 /* Assets.xcassets */; };
 		A7416ED72972843500E1A765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7416ED52972843500E1A765 /* LaunchScreen.storyboard */; };
+		FB0F129F297B4017000E292C /* TipoJuegoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F129E297B4017000E292C /* TipoJuegoViewModel.swift */; };
 		FB1032162978AD450057BC3A /* JugadorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1032152978AD450057BC3A /* JugadorViewModel.swift */; };
 		FB1032182978AD7F0057BC3A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1032172978AD7F0057BC3A /* Result.swift */; };
 		FB10321A2978AE050057BC3A /* Jugadores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1032192978AE050057BC3A /* Jugadores.swift */; };
 		FB1032202978BBC90057BC3A /* PuntajeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10321F2978BBC90057BC3A /* PuntajeViewController.swift */; };
 		FB1032232978C04E0057BC3A /* PuntajeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1032212978C04E0057BC3A /* PuntajeTableViewCell.swift */; };
 		FB1032242978C04E0057BC3A /* PuntajeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1032222978C04E0057BC3A /* PuntajeTableViewCell.xib */; };
+		FB56BE3A297A196200205607 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB56BE39297A196200205607 /* InicioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +34,14 @@
 		A7416ED32972843500E1A765 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7416ED62972843500E1A765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7416ED82972843500E1A765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB0F129E297B4017000E292C /* TipoJuegoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoJuegoViewModel.swift; sourceTree = "<group>"; };
 		FB1032152978AD450057BC3A /* JugadorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JugadorViewModel.swift; sourceTree = "<group>"; };
 		FB1032172978AD7F0057BC3A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		FB1032192978AE050057BC3A /* Jugadores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jugadores.swift; sourceTree = "<group>"; };
 		FB10321F2978BBC90057BC3A /* PuntajeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuntajeViewController.swift; sourceTree = "<group>"; };
 		FB1032212978C04E0057BC3A /* PuntajeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuntajeTableViewCell.swift; sourceTree = "<group>"; };
 		FB1032222978C04E0057BC3A /* PuntajeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PuntajeTableViewCell.xib; sourceTree = "<group>"; };
+		FB56BE39297A196200205607 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				FB1032152978AD450057BC3A /* JugadorViewModel.swift */,
+				FB0F129E297B4017000E292C /* TipoJuegoViewModel.swift */,
 			);
 			path = "view model ";
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 				FB10321F2978BBC90057BC3A /* PuntajeViewController.swift */,
 				FB1032212978C04E0057BC3A /* PuntajeTableViewCell.swift */,
 				FB1032222978C04E0057BC3A /* PuntajeTableViewCell.xib */,
+				FB56BE39297A196200205607 /* InicioViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,7 +201,9 @@
 				FB10321A2978AE050057BC3A /* Jugadores.swift in Sources */,
 				FB1032182978AD7F0057BC3A /* Result.swift in Sources */,
 				A7416ED22972843500E1A765 /* PiedraPapelTijeras.xcdatamodeld in Sources */,
+				FB56BE3A297A196200205607 /* InicioViewController.swift in Sources */,
 				A7416ECC2972843500E1A765 /* ViewController.swift in Sources */,
+				FB0F129F297B4017000E292C /* TipoJuegoViewModel.swift in Sources */,
 				FB1032202978BBC90057BC3A /* PuntajeViewController.swift in Sources */,
 				A7416EC82972843500E1A765 /* AppDelegate.swift in Sources */,
 				A7416ECA2972843500E1A765 /* SceneDelegate.swift in Sources */,

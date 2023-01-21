@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-787" y="-2184"/>
         </scene>
-        <!--View Controller-->
+        <!--Inicio View Controller-->
         <scene sceneID="wVl-VZ-B2U">
             <objects>
-                <viewController id="zfL-zp-6nN" sceneMemberID="viewController">
+                <viewController id="zfL-zp-6nN" customClass="InicioViewController" customModule="PiedraPapelTijeras" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZyE-PT-e9Y">
                         <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
                                     <backgroundConfiguration key="background" image="multijugador"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="Seguesmultijugador" id="CDT-Rf-A99"/>
+                                    <action selector="MultiPlayerAction:" destination="zfL-zp-6nN" eventType="touchUpInside" id="J1W-j9-Cl5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpo-7s-Lfk">
@@ -59,21 +59,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Puntaje" image="rectangle.inset.filled.and.person.filled" catalog="system"/>
                                 <connections>
-                                    <segue destination="ekk-nd-dMD" kind="show" identifier="PuntajeSegues" id="mGc-q5-t3c"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2a-Gh-FwT">
-                                <rect key="frame" x="695" y="158" width="101" height="94"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="94" id="H0K-1b-6L4"/>
-                                    <constraint firstAttribute="width" constant="101" id="eba-cj-trn"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="personalizar"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="4aW-6G-FJJ" kind="show" id="iUJ-Ju-qbq"/>
+                                    <action selector="puntajesegues:" destination="zfL-zp-6nN" eventType="touchUpInside" id="Lan-9o-bNE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byu-Z1-nYi">
@@ -88,7 +74,21 @@
                                     <backgroundConfiguration key="background" image="Play"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="seguesPc" id="Vew-Ci-6Yl"/>
+                                    <action selector="OnePlayerAction:" destination="zfL-zp-6nN" eventType="touchUpInside" id="Tfk-C9-CJE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2a-Gh-FwT">
+                                <rect key="frame" x="694" y="158" width="101" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="H0K-1b-6L4"/>
+                                    <constraint firstAttribute="width" constant="101" id="eba-cj-trn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="personalizar"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="4aW-6G-FJJ" kind="show" id="iUJ-Ju-qbq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -107,10 +107,16 @@
                             <constraint firstItem="vpo-7s-Lfk" firstAttribute="centerX" secondItem="Byu-Z1-nYi" secondAttribute="centerX" id="rOZ-b7-ZDf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="urA-1a-KhZ"/>
+                    <connections>
+                        <segue destination="ekk-nd-dMD" kind="show" identifier="seguespuntaje" id="mlK-8v-1UH"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="seguesOnePlayer" id="8sA-xc-KpD"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="SeguesMultiPlayer" id="UwR-c4-jyV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aO7-gb-4NG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-760.94420600858371" y="-973.95348837209303"/>
+            <point key="canvasLocation" x="-704" y="-740"/>
         </scene>
         <!--Puntaje View Controller-->
         <scene sceneID="N0b-kC-iXw">
@@ -129,7 +135,7 @@
                                     <backgroundConfiguration key="background" image="salida"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="zfL-zp-6nN" kind="show" id="9fN-Wy-v01"/>
+                                    <segue destination="zfL-zp-6nN" kind="show" id="Vzv-dl-8ii"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="27" id="IPo-rN-THz">
@@ -182,6 +188,9 @@
                                 <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background" image="replay"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="KV0-Ik-FbC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iud-OU-bNQ"/>
@@ -189,12 +198,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="J4H-7i-oaW"/>
                     <connections>
+                        <outlet property="RetryButton" destination="6F3-EQ-CtL" id="8Hp-cY-HKy"/>
                         <outlet property="tableview" destination="DGl-WS-EqD" id="m4b-jt-ALU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4l-lJ-xy4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78.540772532188839" y="-1903.2558139534883"/>
+            <point key="canvasLocation" x="-24" y="-1973"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -381,7 +391,7 @@
                         <outlet property="PuntajePClbl" destination="AP9-xB-NU7" id="d1y-fI-cv5"/>
                         <outlet property="TijerasJugador" destination="zYb-Kd-izs" id="LgU-cL-1Kz"/>
                         <outlet property="TijerasPc" destination="xAE-kS-T0W" id="baC-xy-RlZ"/>
-                        <segue destination="ekk-nd-dMD" kind="show" identifier="seguespuntaje" id="gbV-gy-hLs"/>
+                        <segue destination="ekk-nd-dMD" kind="show" identifier="seguespuntajepartida" id="gbV-gy-hLs"/>
                         <segue destination="zfL-zp-6nN" kind="show" identifier="SeguesInicio" id="L3B-1e-pzu"/>
                     </connections>
                 </viewController>
@@ -391,9 +401,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Vew-Ci-6Yl"/>
-        <segue reference="mGc-q5-t3c"/>
-        <segue reference="9fN-Wy-v01"/>
+        <segue reference="UwR-c4-jyV"/>
+        <segue reference="gbV-gy-hLs"/>
+        <segue reference="L3B-1e-pzu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Play" width="512" height="512"/>

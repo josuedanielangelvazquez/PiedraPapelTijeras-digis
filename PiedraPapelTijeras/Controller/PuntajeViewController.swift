@@ -9,7 +9,11 @@ import UIKit
 import CoreData
 class PuntajeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let puntajeviewmodel = JugadorViewModel()
+    var segueproveniente =  ""
     var jugador = [Jugador]()
+
+    @IBOutlet weak var RetryButton: UIButton!
+    
     @IBOutlet weak var tableview: UITableView!
     
     //ViewController.delegate = self
@@ -25,6 +29,16 @@ class PuntajeViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableview.register(UINib(nibName: "PuntajeTableViewCell", bundle: .main), forCellReuseIdentifier: "puntajecell")
         // Do any additional setup after loading the view.
         loadData()
+        validacion()
+    }
+    
+    func validacion(){
+        if segueproveniente.elementsEqual("Inicio"){
+            RetryButton.isHidden = true
+        }
+        else{
+            RetryButton.isHidden = false
+        }
     }
     func loadData(){
         let result = JugadorViewModel().GETALL()
@@ -54,7 +68,7 @@ class PuntajeViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.Jugador1lbl.text = jugador[indexPath.row].Jugador1
         cell.Puntacionlbl.text = String(jugador[indexPath.row].Puntuacion)
         cell.Jugador2lbl.text = jugador[indexPath.row].Jugador2
-        cell.Puntacion2lbl.text = String(jugador[indexPath.row].Puntuacion)
+        cell.Puntacion2lbl.text = String(jugador[indexPath.row].Puntuacion2)
         
         
         
