@@ -21,6 +21,7 @@
 		FB1032202978BBC90057BC3A /* PuntajeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10321F2978BBC90057BC3A /* PuntajeViewController.swift */; };
 		FB1032232978C04E0057BC3A /* PuntajeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1032212978C04E0057BC3A /* PuntajeTableViewCell.swift */; };
 		FB1032242978C04E0057BC3A /* PuntajeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1032222978C04E0057BC3A /* PuntajeTableViewCell.xib */; };
+		FB542C67297F0B9100CA3AEE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB542C66297F0B9100CA3AEE /* TableViewController.swift */; };
 		FB56BE3A297A196200205607 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB56BE39297A196200205607 /* InicioViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		FB10321F2978BBC90057BC3A /* PuntajeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuntajeViewController.swift; sourceTree = "<group>"; };
 		FB1032212978C04E0057BC3A /* PuntajeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuntajeTableViewCell.swift; sourceTree = "<group>"; };
 		FB1032222978C04E0057BC3A /* PuntajeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PuntajeTableViewCell.xib; sourceTree = "<group>"; };
+		FB542C66297F0B9100CA3AEE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		FB56BE39297A196200205607 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 		FB10321C2978BB750057BC3A /* view */ = {
 			isa = PBXGroup;
 			children = (
+				FB542C66297F0B9100CA3AEE /* TableViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				A7416ECC2972843500E1A765 /* ViewController.swift in Sources */,
 				FB0F129F297B4017000E292C /* TipoJuegoViewModel.swift in Sources */,
 				FB1032202978BBC90057BC3A /* PuntajeViewController.swift in Sources */,
+				FB542C67297F0B9100CA3AEE /* TableViewController.swift in Sources */,
 				A7416EC82972843500E1A765 /* AppDelegate.swift in Sources */,
 				A7416ECA2972843500E1A765 /* SceneDelegate.swift in Sources */,
 				FB1032232978C04E0057BC3A /* PuntajeTableViewCell.swift in Sources */,
