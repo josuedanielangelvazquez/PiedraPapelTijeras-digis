@@ -17,14 +17,54 @@
                     <view key="view" contentMode="scaleToFill" id="g0k-2Y-H3L">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHE-Yp-gWr">
+                                <rect key="frame" x="283" y="275" width="112" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="speaker.slash.fill" catalog="system" imageContentMode="scaleAspectFit"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-dv-E6g">
+                                <rect key="frame" x="451" y="275" width="112" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="speaker.3.fill" catalog="system" imageContentMode="scaleAspectFit"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSz-EU-Cwe">
+                                <rect key="frame" x="122" y="53" width="187" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="salida" imageContentMode="scaleAspectFit"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="zfL-zp-6nN" kind="show" id="xNN-oD-9Jc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMH-Gd-frv">
+                                <rect key="frame" x="636" y="18" width="114" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="person.fill.questionmark" catalog="system" imageContentMode="scaleAspectFit"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UNo-Qb-LV3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0027306878473609686" green="0.99415415525436401" blue="0.98809069395065308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="RSV-VF-GBA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZv-T9-H0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-787" y="-2184"/>
+            <point key="canvasLocation" x="-787.5" y="-2184.057971014493"/>
         </scene>
         <!--Inicio View Controller-->
         <scene sceneID="wVl-VZ-B2U">
@@ -268,7 +308,7 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VS" translatesAutoresizingMaskIntoConstraints="NO" id="lV4-cv-4O3">
-                                <rect key="frame" x="306" y="132" width="284" height="149"/>
+                                <rect key="frame" x="306" y="131" width="296" height="150"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
@@ -395,6 +435,7 @@
         <image name="Play" width="512" height="512"/>
         <image name="VS" width="256" height="256"/>
         <image name="multijugador" width="512" height="512"/>
+        <image name="person.fill.questionmark" catalog="system" width="128" height="102"/>
         <image name="personalizar" width="512" height="512"/>
         <image name="piedra-2" width="512" height="512"/>
         <image name="playpause.fill" catalog="system" width="128" height="69"/>
@@ -402,12 +443,11 @@
         <image name="rename" width="512" height="512"/>
         <image name="replay" width="512" height="512"/>
         <image name="salida" width="512" height="512"/>
+        <image name="speaker.3.fill" catalog="system" width="128" height="84"/>
+        <image name="speaker.slash.fill" catalog="system" width="118" height="128"/>
         <image name="tijeras" width="512" height="512"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -49,6 +49,15 @@ class ViewController: UIViewController {
         
         if (segundos == -1){
             if EleccionJugador1 == "", EleccionJugador2 != ""{
+                if EleccionJugador2.elementsEqual("PiedraPc"){
+                    PiedraPc.backgroundColor = .green
+                }
+                if EleccionJugador2.elementsEqual("PapelPc"){
+                    PapelPc.backgroundColor = .green
+                }
+                if EleccionJugador2.elementsEqual("TijerasPc"){
+                    TijerasPc.backgroundColor = .green
+                }
                 PartidasGanadasPC += 1
                 PuntajeJugadorlbl.text = String(PartidasGanadasJugador)
                 PuntajePClbl.text = String(PartidasGanadasPC)
@@ -58,6 +67,15 @@ class ViewController: UIViewController {
               
             }
             if EleccionJugador1 != "", EleccionJugador2 == ""{
+                if EleccionJugador1.elementsEqual("PiedraJugador"){
+                    PiedraJugador.backgroundColor = .green
+                }
+                if EleccionJugador1.elementsEqual("PapelJugador"){
+                    PapelJugador.backgroundColor = .green
+                }
+                if EleccionJugador1.elementsEqual("TijerasJugador"){
+                    TijerasJugador.backgroundColor = .green
+                }
                 PartidasGanadasJugador += 1
                 PuntajeJugadorlbl.text = String(PartidasGanadasJugador)
                 PuntajePClbl.text = String(PartidasGanadasPC)
@@ -68,11 +86,13 @@ class ViewController: UIViewController {
                 
             }
             if EleccionJugador2 == "", EleccionJugador1 == ""{
+                if seguesTipoJuego.elementsEqual("OnePlayer"), PartidasGanadasPC == 0{
+                    Pc = Int(arc4random_uniform(3))
+                    TipoPlaer(var: "")
+                }
                 let alert = UIAlertController(title: "Empate", message: "Surgio un Empate", preferredStyle: .alert)
                 let accion = UIAlertAction(title: "Ok", style: .default, handler: {miAcccion in
-                    self.segundos = 5
-                    self.EleccionJugador1 = ""
-                    self.EleccionJugador2 = ""
+                    self.reiniciar()
                 
                 })
                 alert.addAction(accion)
@@ -196,6 +216,8 @@ class ViewController: UIViewController {
             TijerasJugador.backgroundColor = .none
             EleccionJugador1 = ""
             EleccionJugador2 = ""
+           self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.ContadordeTiempo), userInfo: nil, repeats: true)
+            self.reiniciar()
         }
         let alert = UIAlertController(title: "Ganador", message: "Surgio un Empate", preferredStyle: .alert)
                                       
@@ -205,7 +227,7 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {miAccion in validarMessage()}))
         alertPc.addAction(UIAlertAction(title: "Ok", style: .default, handler: {miAccion in validarMessage()}))
         alertJugador.addAction(UIAlertAction(title: "Ok", style: .default, handler: {miAccion in validarMessage()}))
-           Pc = Int(arc4random_uniform(3))
+          
            print(Pc)
            var button = TipoPlayer
            switch button{
@@ -274,7 +296,22 @@ class ViewController: UIViewController {
                    TijerasPc.tintColor = .black
                }
            default:
-               print("termino")
+               if Pc == piedrapc{
+                              PiedraPc.backgroundColor = .green
+                              self.present(alertPc, animated: true)
+                              PartidasGanadasPC += 1
+                          }
+                          if Pc == papelpc{
+                              self.present(alertPc, animated: true)
+                              PapelPc.backgroundColor = .green
+                              PartidasGanadasPC += 1
+                          }
+                          if Pc == tijeraspc{
+                              self.present(alertPc, animated: true)
+                              TijerasPc.backgroundColor = .green
+                              PartidasGanadasPC += 1
+
+                          }
            }
            PuntajeJugadorlbl.text = String(PartidasGanadasJugador)
            PuntajePClbl.text = String(PartidasGanadasPC)
@@ -290,6 +327,8 @@ class ViewController: UIViewController {
             TijerasJugador.backgroundColor = .none
             EleccionJugador1 = ""
             EleccionJugador2 = ""
+            self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.ContadordeTiempo), userInfo: nil, repeats: true)
+             self.reiniciar()
         }
         let alert = UIAlertController(title: "Ganador", message: "Surgio un Empate", preferredStyle: .alert)
                                       
@@ -307,56 +346,56 @@ class ViewController: UIViewController {
             case "PiedraJugador":
                 if EleccionJugador2.elementsEqual("PiedraPc"){
                     self.present(alert, animated: true)
-                    PiedraJugador.backgroundColor = .white
-                    PiedraPc.backgroundColor = .white
+                    PiedraJugador.backgroundColor = .green
+                    PiedraPc.backgroundColor = .green
                 }
                 if EleccionJugador2.elementsEqual("PapelPc"){
                     self.present(alerJugador2, animated: true)
-                    PiedraJugador.backgroundColor = .white
-                    PapelPc.backgroundColor = .white
+                    PiedraJugador.backgroundColor = .red
+                    PapelPc.backgroundColor = .green
                     PartidasGanadasPC += 1
                 }
                 if EleccionJugador2.elementsEqual("TijerasPc"){
                     self.present(alertJugador, animated: true)
-                    PiedraJugador.backgroundColor = .white
-                    TijerasPc.backgroundColor = .white
+                    PiedraJugador.backgroundColor = .green
+                    TijerasPc.backgroundColor = .red
                     PartidasGanadasJugador += 1                }
             case "PapelJugador":
                 if EleccionJugador2.elementsEqual("PiedraPc"){
                     self.present(alertJugador, animated: true)
-                    PapelJugador.backgroundColor = .white
-                    PiedraPc.backgroundColor = .white
+                    PapelJugador.backgroundColor = .green
+                    PiedraPc.backgroundColor = .red
                     PartidasGanadasJugador += 1
                 }
                 if EleccionJugador2.elementsEqual("PapelPc"){
                     self.present(alert, animated: true)
-                    PapelJugador.backgroundColor = .white
-                    PapelPc.backgroundColor = .white
+                    PapelJugador.backgroundColor = .green
+                    PapelPc.backgroundColor = .green
                     
                 }
                 if EleccionJugador2.elementsEqual("TijerasPc"){
                     self.present(alerJugador2, animated: true)
-                    PapelJugador.backgroundColor = .white
-                    TijerasPc.backgroundColor = .white
+                    PapelJugador.backgroundColor = .red
+                    TijerasPc.backgroundColor = .green
                     PartidasGanadasPC += 1
                 }
             case "TijerasJugador":
                 if EleccionJugador2.elementsEqual("PiedraPc"){
                     self.present(alerJugador2, animated: true)
-                    TijerasJugador.backgroundColor = .white
-                    PiedraPc.backgroundColor = .white
+                    TijerasJugador.backgroundColor = .red
+                    PiedraPc.backgroundColor = .green
                     PartidasGanadasPC += 1
                 }
                 if EleccionJugador2.elementsEqual("PapelPc"){
                     self.present(alertJugador, animated: true)
-                    TijerasJugador.backgroundColor = .white
-                    PapelPc.backgroundColor = .white
+                    TijerasJugador.backgroundColor = .green
+                    PapelPc.backgroundColor = .red
                     PartidasGanadasJugador += 1
                 }
                 if EleccionJugador2.elementsEqual("TijerasPc"){
                     self.present(alert, animated: true)
-                    TijerasJugador.backgroundColor = .white
-                    TijerasPc.backgroundColor = .white
+                    TijerasJugador.backgroundColor = .green
+                    TijerasPc.backgroundColor = .green
                 }
                 
             default:
@@ -422,6 +461,7 @@ class ViewController: UIViewController {
                 }}
             PuntajeJugadorlbl.text = String(PartidasGanadasJugador)
             PuntajePClbl.text = String(PartidasGanadasPC)
+            self.timer.invalidate()
         }
         else{
             print("En espera del otro jugador")
@@ -430,15 +470,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func Paused(_ sender: UIButton){
+        timer.invalidate()
         let alert = UIAlertController(title: "¿Salir?", message: "¿Quieres Seguir Jugando?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Salir", style: .cancel){miAccion in self.Salir()})
-        alert.addAction(UIAlertAction(title: "Seguir Jugando", style: .default))
+        alert.addAction(UIAlertAction(title: "Seguir Jugando", style: .default, handler: {miaccion in self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.ContadordeTiempo), userInfo: nil, repeats: true)
+            print("Seguir jugando")
+        }))
         self.present(alert, animated: true)
     }
     
     @IBAction func ButtonAction(_ sender: UIButton) {
         if seguesTipoJuego.elementsEqual("OnePlayer"){
-            
+            self.timer.invalidate()
+            reiniciar()
             TipoPlaer(var: String(sender.restorationIdentifier!))
             jugador2 = "Pc"
 
@@ -451,7 +495,9 @@ class ViewController: UIViewController {
             }
             else{
                   EleccionJugador2 = String(sender.restorationIdentifier!)
+                
                 PlayMultiplayer()
+                
 
             }
           
