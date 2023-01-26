@@ -86,7 +86,7 @@ class ViewController: UIViewController {
                 
             }
             if EleccionJugador2 == "", EleccionJugador1 == ""{
-                if seguesTipoJuego.elementsEqual("OnePlayer"), PartidasGanadasPC == 0{
+                if seguesTipoJuego.elementsEqual("OnePlayer"){
                     Pc = Int(arc4random_uniform(3))
                     TipoPlaer(var: "")
                 }
@@ -144,6 +144,13 @@ class ViewController: UIViewController {
         }
         performSegue(withIdentifier: "seguespuntajepartida", sender: nil)
         
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "seguespuntajepartida"{
+            let tiposegues = segue.destination as! PuntajeViewController
+            tiposegues.tiposegues = seguesTipoJuego
+        }
     }
     func Salir(){
        
@@ -216,7 +223,6 @@ class ViewController: UIViewController {
             TijerasJugador.backgroundColor = .none
             EleccionJugador1 = ""
             EleccionJugador2 = ""
-           self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.ContadordeTiempo), userInfo: nil, repeats: true)
             self.reiniciar()
         }
         let alert = UIAlertController(title: "Ganador", message: "Surgio un Empate", preferredStyle: .alert)
@@ -227,73 +233,67 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {miAccion in validarMessage()}))
         alertPc.addAction(UIAlertAction(title: "Ok", style: .default, handler: {miAccion in validarMessage()}))
         alertJugador.addAction(UIAlertAction(title: "Ok", style: .default, handler: {miAccion in validarMessage()}))
-          
+        Pc = Int(arc4random_uniform(3))
            print(Pc)
            var button = TipoPlayer
            switch button{
                
            case "PiedraJugador":
-               PiedraJugador.tintColor = .black
-               PiedraJugador.backgroundColor = .white
                if Pc == piedrapc{
-                   PiedraPc.backgroundColor = .white
-                   PiedraPc.tintColor = .black
+                   PiedraJugador.backgroundColor = .green
+                   PiedraPc.backgroundColor = .green
                    self.present(alert, animated: true)
                    
                }
                if Pc == papelpc{
                    self.present(alertPc, animated: true)
-                   PapelPc.tintColor = .black
-                   PapelPc.backgroundColor = .white
+                   PiedraJugador.backgroundColor = .red
+                   PapelPc.backgroundColor = .green
                    PartidasGanadasPC += 1
                }
                if Pc == tijeraspc{
                    self.present(alertJugador, animated: true)
-                   TijerasPc.tintColor = .black
-                   TijerasPc.backgroundColor = .white
+                   PiedraJugador.backgroundColor = .green
+                   TijerasPc.backgroundColor = .red
                    PartidasGanadasJugador += 1
                }
            case "PapelJugador":
-               PapelJugador.backgroundColor = .white
-               PapelJugador.tintColor = .white
                if Pc == piedrapc{
-                   PiedraPc.backgroundColor = .white
-                   PiedraPc.tintColor = .black
+                   PapelJugador.backgroundColor = .green
+                   PiedraPc.backgroundColor = .red
                    self.present(alertJugador, animated: true)
                    PartidasGanadasJugador += 1
                }
                if Pc == papelpc{
                    self.present(alert, animated: true)
-                   PapelPc.tintColor = .black
-                   PapelPc.backgroundColor = .white
+                   PapelJugador.backgroundColor = .green
+                   PapelPc.backgroundColor = .green
                    
                }
                if Pc == tijeraspc{
                    self.present(alertPc, animated: true)
-                   TijerasPc.backgroundColor = .white
-                   TijerasPc.tintColor = .black
+                   TijerasPc.backgroundColor = .green
+                   PapelJugador.backgroundColor = .red
                    PartidasGanadasPC += 1
                }
            case "TijerasJugador":
-               TijerasJugador.backgroundColor = .white
-               TijerasJugador.tintColor = .white
-               
-               if Pc == piedrapc{
-                   PiedraPc.backgroundColor = .white
-                   PiedraPc.tintColor = .black
+                if Pc == piedrapc{
+                   PiedraPc.backgroundColor = .green
+                    TijerasJugador.backgroundColor = .red
                    self.present(alertPc, animated: true)
                    PartidasGanadasPC += 1
                }
                if Pc == papelpc{
                    self.present(alertJugador, animated: true)
-                   PapelPc.tintColor = .black
-                   PapelPc.backgroundColor = .white
+                   PapelPc.backgroundColor = .red
+                   TijerasJugador.backgroundColor = .green
                    PartidasGanadasJugador += 1
                }
                if Pc == tijeraspc{
                    self.present(alert, animated: true)
-                   TijerasPc.backgroundColor = .white
-                   TijerasPc.tintColor = .black
+                   TijerasPc.backgroundColor = .green
+                   TijerasJugador.backgroundColor = .green
+
                }
            default:
                if Pc == piedrapc{

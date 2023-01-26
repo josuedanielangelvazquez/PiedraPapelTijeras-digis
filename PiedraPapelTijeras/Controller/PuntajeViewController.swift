@@ -11,6 +11,7 @@ class PuntajeViewController: UIViewController, UITableViewDelegate, UITableViewD
     let puntajeviewmodel = JugadorViewModel()
     var segueproveniente =  ""
     var jugador = [Jugador]()
+    var tiposegues = ""
 
     @IBOutlet weak var RetryButton: UIButton!
     
@@ -74,7 +75,21 @@ class PuntajeViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         
         return cell
-    }}
+    }
+    
+    @IBAction func RetryPlay(_ sender: UIButton) {
+        performSegue(withIdentifier: "seguesretry", sender: nil)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "seguesretry"{
+            let segues = segue.destination as! ViewController
+            segues.seguesTipoJuego = tiposegues
+        }
+    }
+    
+}
+
 
     /*
     // MARK: - Navigation

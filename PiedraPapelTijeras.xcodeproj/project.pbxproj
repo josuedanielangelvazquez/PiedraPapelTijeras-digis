@@ -23,6 +23,8 @@
 		FB1032242978C04E0057BC3A /* PuntajeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1032222978C04E0057BC3A /* PuntajeTableViewCell.xib */; };
 		FB542C67297F0B9100CA3AEE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB542C66297F0B9100CA3AEE /* TableViewController.swift */; };
 		FB56BE3A297A196200205607 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB56BE39297A196200205607 /* InicioViewController.swift */; };
+		FBC2FC822981E50F001A4A1C /* ConfiguracionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2FC812981E50F001A4A1C /* ConfiguracionViewController.swift */; };
+		FBC2FC862981EAD5001A4A1C /* Sonido.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBC2FC852981EAD5001A4A1C /* Sonido.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		FB1032222978C04E0057BC3A /* PuntajeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PuntajeTableViewCell.xib; sourceTree = "<group>"; };
 		FB542C66297F0B9100CA3AEE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		FB56BE39297A196200205607 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
+		FBC2FC812981E50F001A4A1C /* ConfiguracionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracionViewController.swift; sourceTree = "<group>"; };
+		FBC2FC852981EAD5001A4A1C /* Sonido.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sonido.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		A7416EBB2972843500E1A765 = {
 			isa = PBXGroup;
 			children = (
+				FBC2FC852981EAD5001A4A1C /* Sonido.mp3 */,
 				A7416EC62972843500E1A765 /* PiedraPapelTijeras */,
 				A7416EC52972843500E1A765 /* Products */,
 			);
@@ -117,6 +122,7 @@
 				FB1032212978C04E0057BC3A /* PuntajeTableViewCell.swift */,
 				FB1032222978C04E0057BC3A /* PuntajeTableViewCell.xib */,
 				FB56BE39297A196200205607 /* InicioViewController.swift */,
+				FBC2FC812981E50F001A4A1C /* ConfiguracionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +197,7 @@
 				A7416ED42972843500E1A765 /* Assets.xcassets in Resources */,
 				A7416ECF2972843500E1A765 /* Main.storyboard in Resources */,
 				FB1032242978C04E0057BC3A /* PuntajeTableViewCell.xib in Resources */,
+				FBC2FC862981EAD5001A4A1C /* Sonido.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +213,7 @@
 				A7416ED22972843500E1A765 /* PiedraPapelTijeras.xcdatamodeld in Sources */,
 				FB56BE3A297A196200205607 /* InicioViewController.swift in Sources */,
 				A7416ECC2972843500E1A765 /* ViewController.swift in Sources */,
+				FBC2FC822981E50F001A4A1C /* ConfiguracionViewController.swift in Sources */,
 				FB0F129F297B4017000E292C /* TipoJuegoViewModel.swift in Sources */,
 				FB1032202978BBC90057BC3A /* PuntajeViewController.swift in Sources */,
 				FB542C67297F0B9100CA3AEE /* TableViewController.swift in Sources */,
@@ -359,7 +367,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HSJJHK6893;
+				DEVELOPMENT_TEAM = 2VU8L758JK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PiedraPapelTijeras/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -373,7 +381,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Platzi.PiedraPapelTijeras;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digis.PiedraPapelTijeras;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -388,7 +396,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HSJJHK6893;
+				DEVELOPMENT_TEAM = 2VU8L758JK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PiedraPapelTijeras/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -402,7 +410,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Platzi.PiedraPapelTijeras;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digis.PiedraPapelTijeras;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
